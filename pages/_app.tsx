@@ -1,16 +1,13 @@
 import '../public/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { SessionProvider } from 'next-auth/react'
+import Inspect from 'inspx'
 
-function Oceaners({
-  Component,
-  pageProps: { session, ...pageProps },
-}: AppProps) {
-  return (
-    // <SessionProvider session={session}>
-    <Component {...pageProps} />
-    // </SessionProvider>
-  )
+function Oceaners({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+   return (
+      <Inspect>
+         <Component {...pageProps} />
+      </Inspect>
+   )
 }
 
 export default Oceaners
