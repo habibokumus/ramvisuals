@@ -1,7 +1,7 @@
 import React from 'react'
 import { cn } from '@/~lib/utils'
 
-import Paragraph from './Paragraph'
+import Paragraph from './paragraph-p1'
 
 export default function Button({ className }: { className?: string }) {
    return (

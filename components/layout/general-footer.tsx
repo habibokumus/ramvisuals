@@ -8,7 +8,7 @@ import {
    IconPhoneCall,
 } from '@tabler/icons-react'
 
-import Paragraph from '../elements/Paragraph'
+import Paragraph from '../elements/paragraph-p1'
 import { SvgLogoBlack } from '../svg'
 
 export default function GeneralFooter() {

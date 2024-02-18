@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Montserrat } from 'next/font/google'
 
 import GeneralFooter from './general-footer'

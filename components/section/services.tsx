@@ -1,19 +1,16 @@
 import React from 'react'
-import { IconUpload } from '@tabler/icons-react'
+import { IconAd2, IconDeer, IconPhotoVideo, IconUpload, IconUserScan, IconVideo } from '@tabler/icons-react'
 
-import Paragraph from '../elements/Paragraph'
 import Custom_h1 from '../elements/custom-h1'
+import Paragraph from '../elements/paragraph-p1'
 
 export default function Services() {
    return (
       <section className="relative z-30 h-full px-[150px]">
          <div className="h-[107px]" />
-         <div className="mx-auto w-full max-w-[498px]">
-            <Custom_h1 text="All-in-one platform" className="text-center" />
-            <Paragraph
-               text="You take care of the video quality and we take care of everything else"
-               className="text-center"
-            />
+         <div className="mx-auto w-full max-w-[528px]">
+            <Custom_h1 text="Atölyemizi Keşfedin" className="text-center" />
+            <Paragraph text="Entegre Medya ve Danışmanlık Hizmetleri" className="text-center" />
          </div>
          <div className="grid grid-cols-3 gap-[115px] pt-[50px]">
             {Content.map((item, idx) => {
@@ -36,33 +33,36 @@ export default function Services() {
 
 const Content = [
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconVideo className="text-[#006AFF]" />,
+      title: 'Film',
+      description: 'Beyazperde, Televizyon, Streaming Platformları, Film Festivalleri',
    },
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconDeer className="text-[#006AFF]" />,
+      title: 'Belgesel',
+      description: 'Televizyon, Streaming Platformları, Eğitim Kurumları, topluluk Merkezleri, Müzeler',
    },
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconAd2 className="text-[#006AFF]" />,
+      title: 'Reklam',
+      description:
+         'Televizyon Reklamları, Dijital Reklamlar (İnternet Reklamları, Sosyal Medya Reklamları), Radyo Reklamları',
    },
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconAd2 className="text-[#006AFF]" />,
+      title: 'Dijital Medya İçerikleri',
+      description:
+         'Web Dizileri, Kısa Filmler, Video Bloglar (Vloglar), Podcastler, Online Eğitim Kursları, Sosyal Medya İçerikleri',
    },
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconPhotoVideo className="text-[#006AFF]" />,
+      title: 'Post-Prodüksiyon Hizmetleri',
+      description: 'Editing, Visual Effects, Color correction, Color grading, Ses miksajı',
    },
    {
-      icon: <IconUpload className="text-[#006AFF]" />,
-      title: 'Upload & Organize',
-      description: 'Upload in bulk, organize content in categories, add custom filters & upload extras.',
+      icon: <IconUserScan className="text-[#006AFF]" />,
+      title: 'Danışmanlık',
+      description:
+         'Pazarlama ve Reklam Danışmanlığı, Marka Yönetimi ve Pozisyonlama, Dijital Pazarlama Stratejileri, İçerik Stratejisi ve Geliştirme',
    },
 ]
