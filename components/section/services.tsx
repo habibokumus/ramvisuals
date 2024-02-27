@@ -1,18 +1,18 @@
 import React from 'react'
-import { IconAd2, IconDeer, IconPhotoVideo, IconUpload, IconUserScan, IconVideo } from '@tabler/icons-react'
+import { IconAd2, IconDeer, IconPhotoVideo, IconUserScan, IconVideo } from '@tabler/icons-react'
 
 import Custom_h1 from '../elements/custom-h1'
 import Paragraph from '../elements/paragraph-p1'
 
 export default function Services() {
    return (
-      <section className="relative z-30 h-full px-[150px]">
+      <section className="relative z-30 h-full px-6 md:px-[80px] xl:px-[150px]">
          <div className="h-[107px]" />
          <div className="mx-auto w-full max-w-[528px]">
             <Custom_h1 text="Atölyemizi Keşfedin" className="text-center" />
             <Paragraph text="Entegre Medya ve Danışmanlık Hizmetleri" className="text-center" />
          </div>
-         <div className="grid grid-cols-3 gap-[115px] pt-[50px]">
+         <div className="grid grid-cols-1 gap-10 pt-[50px] md:grid-cols-2 lg:grid-cols-3 lg:gap-[115px]">
             {Content.map((item, idx) => {
                return (
                   // eslint-disable-next-line react/no-array-index-key

@@ -15,8 +15,8 @@ export default function GeneralHeader() {
    //    window.location.reload()
    // }
    return (
-      <header className="fixed z-50 flex w-full flex-row items-center justify-between  bg-[#141516] px-[150px] py-6 text-white">
-         <nav className="flex flex-row items-center">
+      <header className="fixed z-50 flex w-full flex-row items-center justify-center bg-[#141516]  bg-opacity-70 px-[150px] py-6 text-white backdrop-blur-2xl lg:justify-between">
+         <nav className="flex flex-row items-center justify-center ">
             <SvgLogo />
             {/* <div className="flex flex-row items-center gap-[77px] pl-[100px]">
                <Link href="/">
@@ -31,7 +31,7 @@ export default function GeneralHeader() {
             </div> */}
          </nav>
 
-         <Button />
+         <Button className="hidden lg:flex" />
       </header>
    )
 }

@@ -10,9 +10,9 @@ export default function Welcome() {
    const [open, setOpen] = useState<boolean>(false)
    return (
       <>
-         <section className="relative z-30 flex h-full min-h-screen flex-row items-center justify-between bg-[#141516] px-[150px]">
-            <div className="flex max-w-[489px] flex-col gap-[17px]">
-               <h1 className="text-[49px] font-bold text-white">{Content[0].title}</h1>
+         <section className="relative z-30 flex h-full min-h-screen flex-col items-center justify-between gap-10 bg-[#141516] px-6 py-[150px] lg:flex-row lg:px-[150px]">
+            <div className="order-last flex max-w-[489px] flex-col gap-[17px] lg:order-first">
+               <h1 className="text-4xl font-bold text-white lg:text-5xl">{Content[0].title}</h1>
                <Paragraph className="font-thin text-white" text={Content[0].subtitle} />
             </div>
             <div onClick={() => setOpen(!open)}>

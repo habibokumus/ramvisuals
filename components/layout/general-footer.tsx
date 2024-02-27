@@ -13,8 +13,8 @@ import { SvgLogoBlack } from '../svg'
 
 export default function GeneralFooter() {
    return (
-      <footer className="grid grid-cols-6 gap-6 bg-[#F7F9FA] px-[150px] pt-[82px]">
-         <div className="col-span-2 flex flex-col gap-4">
+      <footer className="grid grid-cols-6 gap-6 bg-[#F7F9FA] px-6 pt-[82px] md:px-[80px] xl:px-[150px]">
+         <div className="col-span-6 flex flex-col gap-4 lg:col-span-2">
             <SvgLogoBlack />
             <Paragraph text="Streaming and Video platform  Video platform Video platform Video platform " />
             <div className="flex flex-row items-center gap-2 text-[#006AFF]">
@@ -23,7 +23,7 @@ export default function GeneralFooter() {
                <IconBrandYoutube />
             </div>
          </div>
-         <div className="col-span-2">
+         <div className="col-span-6 lg:col-span-2">
             <h3 className="text-[18px] font-semibold text-[#141516]">Contact info</h3>
             <div className="flex flex-row items-start gap-2 pt-4">
                <IconLocation className="text-[#006AFF]" />

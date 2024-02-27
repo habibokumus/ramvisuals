@@ -18,14 +18,14 @@ export default function Porfolio() {
       <>
          <section className="h-full bg-[#141516]">
             <Custom_h1 text="Atölye" className="py-20 text-center text-white" />
-            <div className="flex flex-col px-[150px]">
+            <div className="flex flex-col px-6 px-6 md:px-[80px] xl:px-[150px]">
                {content.map((item) => {
                   return (
                      <div key={kgid()}>
                         {item.position === 'left' && (
-                           <div className="flex flex-row items-center justify-between py-10">
-                              <div className="flex max-w-[441px] flex-col gap-6">
-                                 <h2 className="text-[36px] font-semibold text-white">{item.title}</h2>
+                           <div className="flex flex-col items-center justify-between gap-6 py-10 md:gap-10 lg:flex-row">
+                              <div className="order-last flex max-w-[441px] flex-col gap-6 lg:order-first">
+                                 <h2 className="text-2xl font-semibold text-white lg:text-4xl">{item.title}</h2>
                                  <Paragraph text={item.description} className="text-white" />
                               </div>
                               <div onClick={() => setOpen(!open)}>
@@ -41,7 +41,7 @@ export default function Porfolio() {
                            </div>
                         )}
                         {item.position === 'right' && (
-                           <div className="flex flex-row items-center justify-between py-16">
+                           <div className="flex flex-col items-center justify-between gap-6 py-16 md:gap-10 lg:flex-row">
                               <div onClick={() => setOpen(!open)}>
                                  <Image
                                     src={item.img}
@@ -53,7 +53,7 @@ export default function Porfolio() {
                                  />
                               </div>
                               <div className="flex max-w-[441px] flex-col gap-6">
-                                 <h2 className="text-[36px] font-semibold text-white">{item.title}</h2>
+                                 <h2 className="text-2xl font-semibold text-white lg:text-4xl">{item.title}</h2>
                                  <Paragraph text={item.description} className="text-white" />
                               </div>
                            </div>
@@ -62,21 +62,23 @@ export default function Porfolio() {
                   )
                })}
 
-               <div className="mx-auto w-full max-w-[900px]">
-                  <Custom_h1 text={content[4].title} className="text-center text-white" />
-                  <Paragraph text={content[4].description} className="pb-6 text-center text-white" />
-                  <Button className="mx-auto w-fit" />
-               </div>
-               <div className="h-[60px]" />
-               <div onClick={() => setOpen(!open)}>
-                  <Image
-                     src={content[4].img}
-                     width={809}
-                     height={576}
-                     alt="image"
-                     className="mx-auto transition duration-200 ease-in-out hover:scale-105"
-                     onClick={() => setSelectUrl(content[4].url)}
-                  />
+               <div className="flex flex-col gap-10">
+                  <div className="mx-auto w-full max-w-[900px]">
+                     <Custom_h1 text={content[4].title} className="text-center text-white" />
+                     <Paragraph text={content[4].description} className="pb-6 text-center text-white" />
+                     <Button className="mx-auto w-fit" />
+                  </div>
+                  <div className="h-[60px]" />
+                  <div onClick={() => setOpen(!open)} className="order-first md:order-last">
+                     <Image
+                        src={content[4].img}
+                        width={809}
+                        height={576}
+                        alt="image"
+                        className="mx-auto transition duration-200 ease-in-out hover:scale-105"
+                        onClick={() => setSelectUrl(content[4].url)}
+                     />
+                  </div>
                </div>
             </div>
             <div className="h-[110px]" />
